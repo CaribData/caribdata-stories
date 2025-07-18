@@ -1,5 +1,6 @@
 site_name: CaribData Stories
-site_url: https://caribdata.org/stories
+site_description: A data storytelling site for CaribData
+site_url: https://caribdata.github.io/caribdata-stories
 theme:
   name: material
   features:
@@ -15,16 +16,33 @@ theme:
     logo: material/library
     repo: fontawesome/brands/github
   palette:
-    scheme: default
-    primary: blue
-    accent: teal
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark Mode
+      primary: deep orange
+      accent: deep purple
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light Mode
+      primary: green
+      accent: deep orange
 
 plugins:
   - search
   - blog:
       blog_dir: blog
-  - git-revision-date-localized:
-      enable_creation_date: true
+      draft_if_future_date: true
+      categories_allowed:
+       - data
+       - climate
+       - health
+       - sids
+       - caribbean
+      post_url_format: "{slug}/"
 
 markdown_extensions:
   - admonition
@@ -32,13 +50,26 @@ markdown_extensions:
       permalink: true
   - pymdownx.extra
   - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
+#  - pymdownx.tabbed:
+#      alternate_style: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
+extra:
+  social:
+    - icon: /fontawesome/brands/youtube
+      link: https://www.youtube.com/@CaribData
+    - icon: /fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/caribdata
 nav:
   - Home: index.md
-  - About: about.md
   - Blog:
       - blog/index.md
+
+hooks:
+  - hooks/socialmedia.py 
+  
