@@ -1,0 +1,44 @@
+site_name: CaribData Stories
+site_url: https://caribdata.org/stories
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.top
+    - content.action.edit
+    - content.code.annotate
+    - content.tabs.link
+    - navigation.instant
+    - blog
+  language: en
+  icon:
+    logo: material/library
+    repo: fontawesome/brands/github
+  palette:
+    scheme: default
+    primary: blue
+    accent: teal
+
+plugins:
+  - search
+  - blog:
+      blog_dir: blog
+  - git-revision-date-localized:
+      enable_creation_date: true
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.extra
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Blog:
+      - blog/index.md
