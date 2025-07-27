@@ -1,0 +1,15 @@
+body[data-md-page="index"] .section-white,
+body[data-md-page="index"] .section-grey {
+  width: 100vw;
+  margin-left: calc(-1 * ((100vw - 100%) / 2));
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+}
+
+body[data-md-page="index"] .section-white {
+  background-color: white;
+}
+
+body[data-md-page="index"] .section-grey {
+  background-color: #80a1d4;
+}

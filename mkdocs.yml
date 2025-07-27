@@ -1,11 +1,18 @@
-site_name: CaribData Stories
+site_name: CaribData
 site_description: A data storytelling site for CaribData
 site_url: https://caribdata.github.io/caribdata-stories
+use_directory_urls: true
 theme:
   name: material
+  logo: assets/images/caribdata-logo2.png
+  favicon: assets/icons/favicon.ico 
+  font:
+    text: Open Sans
+    code: Monospace
   features:
     - navigation.tabs
     - navigation.top
+    - content.action
     - content.action.edit
     - content.code.annotate
     - content.tabs.link
@@ -16,60 +23,98 @@ theme:
     logo: material/library
     repo: fontawesome/brands/github
   palette:
-    # Dark Mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Dark Mode
-      primary: deep orange
-      accent: deep purple
-    # Light Mode
     - scheme: default
-      toggle:
-        icon: material/weather-night
-        name: Light Mode
-      primary: green
-      accent: deep orange
+#      primary: green
+#      accent: deep orange
 
 plugins:
   - search
   - blog:
-      blog_dir: blog
+      blog_dir: stories
       draft_if_future_date: true
       categories_allowed:
-       - data
-       - climate
-       - health
-       - sids
-       - caribbean
+       - Stories
+       - Soundbites
+       - Deep Dives
+       - Reports
       post_url_format: "{slug}/"
+  - glightbox:
+       touchNavigation: true
+       loop: false
+       effect: zoom
+       slide_effect: slide
+       width: 75%
+       height: auto
+       zoomable: true
+       draggable: true
+       skip_classes:
+         - custom-skip-class-name
+       auto_caption: false
+       caption_position: bottom
+       background: white
+       shadow: true
+       manual: false
 
 markdown_extensions:
+  - md_in_html
   - admonition
-  - toc:
-      permalink: true
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - tables
   - pymdownx.extra
-  - pymdownx.superfences
-#  - pymdownx.tabbed:
-#      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: div
+          class: div
+          format: !!python/name:pymdownx.superfences.fence_div_format
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - attr_list
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - toc:
+      permalink: true
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
 
 extra:
+  # homepage: true
   social:
     - icon: /fontawesome/brands/youtube
       link: https://www.youtube.com/@CaribData
     - icon: /fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/caribdata
-nav:
-  - Home: index.md
-  - Blog:
-      - blog/index.md
+  font:
+    text: Open Sans
+    code: Fira Code
+#  footer: |
+#    <div style="text-align: center; padding-top: 1rem;">
+#      This is a test footer from CaribData 🚀
+#    </div>
 
+
+nav:
+  - Welcome: index.md
+  - Stories:
+      - stories/index.md
 hooks:
   - hooks/socialmedia.py 
-  
+
+extra_css:
+  - styles/landing.css
+  - styles/caribdata-theme.css
+
+# extra_javascript: 
+#   - assets/javascripts/embed.js
+#   - assets/javascripts/flourishrender.js
+
+copyright: Copyright &copy; 2025 Ian Hambleton
