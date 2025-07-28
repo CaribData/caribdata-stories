@@ -1,0 +1,195 @@
+/* CaribData brand colors and Montserrat heading font*/
+:root {
+  --md-primary-fg-color: #045174;  /* Navy Blue */
+  --md-accent-fg-color: #E87A00;   /* Burnt Orange */
+  --md-typeset-a-color: #045174;
+  --md-text-font: "Open Sans", sans-serif;
+  --md-code-font: "Fira Code", monospace;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+}
+/* Optional: change body text font */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+/* Optional: override header or nav styling */
+.md-header, .md-tabs {
+  background-color: #045174 !important; /* Midnight Blue */
+}
+/* Optional: adjust logo size in header */
+.md-header__button.md-logo img {
+  height: 2rem;
+}
+.md-header__button.md-logo img {
+  max-height: none;       /* Prevent unwanted scaling */
+  width: auto;            /* Preserve aspect ratio */
+}
+.md-header__title {
+  line-height: 52px;
+}
+.md-header__title .md-ellipsis {
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #E87A00 !important;
+}
+/* Link color */
+.md-typeset a {
+  color: #045174; /* CaribData Navy Blue */
+  text-decoration: underline;
+}
+/* Link hover color */
+.md-typeset a:hover {
+  color: #E87A00; /* CaribData Burnt Orange */
+  text-decoration: none;
+}
+
+/* CaribData sidebar styling */
+/* Mobile nav link colors — only apply on small screens */
+@media (max-width: 960px) {
+  .md-nav__link {
+    color: #045174 !important;
+  }
+
+  .md-nav__link:hover,
+  .md-nav__link:focus,
+  .md-nav__link--active {
+    color: #E87A00 !important;
+  }
+
+  /* Mobile drawer title strip */
+  .md-nav--primary .md-nav__title {
+    background-color: #045174 !important;
+    color: #E87A00 !important;
+    font-weight: bold;
+  }
+}
+
+/* Sidebar nav links on desktop */
+.md-sidebar__inner .md-nav__link {
+  color: #045174 !important;           /* link color */
+  text-decoration: none !important;
+  font-weight: 400;
+}
+
+/* Hover + focus */
+.md-sidebar__inner .md-nav__link:hover,
+.md-sidebar__inner .md-nav__link:focus {
+  color: #E87A00 !important;           /* hover color */
+  text-decoration: underline;
+}
+
+/* Active/selected page link */
+.md-nav__item--active > .md-nav__link {
+  color: #E87A00 !important;           /* current page color */
+  font-weight: 600;
+}
+
+
+/* Highlight active link */
+.md-nav__item--active > .md-nav__link {
+  color: #E87A00;
+  font-weight: 400;
+}
+
+/* Recolor blog post category links (e.g. "in story") */
+.md-meta__link {
+  color: #045174 !important;        /* CaribData Navy Blue */
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.md-meta__link:hover {
+  color: #E87A00 !important;        /* Burnt Orange */
+  text-decoration: underline;
+}
+
+.md-button {
+  background-color: white !important;
+  color: #045174 !important;
+  border: 2px solid #045174 !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  border-radius: 6px !important;
+  padding: 0.6em 1.2em !important;
+  font-family: 'Montserrat', sans-serif !important;
+  transition: background-color 0.2s ease, color 0.2s ease !important;
+  font-size: 1.0rem !important;  /* scale for smaller screens */
+}
+
+/* Hover + focus effect */
+.md-button:hover,
+.md-button:focus {
+  background-color: #045174 !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+.md-button:hover {
+  transform: scale(1.02) !important;
+}
+@media (max-width: 600px) {
+  .md-button {
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+    font-size: 1rem !important;  /* scale for smaller screens */
+  }
+} 
+
+/* EXTERNAL BUTTON */ 
+.md-button-external {
+  background-color: #04517400 !important;
+  color: #04517485 !important;
+  border: 1.5px solid #04517485 !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+  border-radius: 6px !important;
+  padding: 0.6em 1.2em !important;
+  font-family: 'Montserrat', sans-serif !important;
+  transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+
+/* Hover + focus effect */
+.md-button-external:hover,
+.md-button-external:focus {
+  background-color: #04517485 !important;
+  border: 2px solid #04517400 !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+.md-button-external:hover {
+  transform: scale(1.02) !important;
+}
+@media (max-width: 600px) {
+  .md-button-external {
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+    font-size: 1rem !important;  /* scale for smaller screens */
+  }
+} 
+
+
+/* Sidebar scrollbar for WebKit browsers (Chrome, Edge, Safari) */
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+  width: 8px;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+  background-color: #bbb;     /* grey thumb */
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* Firefox scrollbar */
+.md-sidebar__scrollwrap {
+  scrollbar-color: #bbb transparent;
+  scrollbar-width: thin;
+}

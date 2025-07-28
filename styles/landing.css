@@ -1,0 +1,249 @@
+
+/* Ensures the first article block (my landing content) starts flush with the header. */
+.md-content > article:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Applies responsive font sizing and Montserrat to custom heading classes. */ 
+/* clamp() lets the font size adjust between 1rem and 1.5rem depending on screen width. */ 
+/* 300 is a light, elegant weight. */
+  .hero-heading1 {
+  font-size: clamp(1rem, 5vw, 1.5rem) !important;
+  font-weight: 300 !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+.section-white1 {
+  background-color: #ffffff;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 2rem 2rem;               /* vertical horizontal */
+  text-align: center;
+  box-sizing: border-box;
+}
+.section-shaded1 {
+  background-color: #0451740f;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 2rem 2rem;               /* vertical horizontal */
+  text-align: center;
+  box-sizing: border-box;
+}
+.section-white2 {
+  background-color: #ffffff;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 0.5rem 2rem;               /* vertical horizontal */
+  text-align: center;
+  box-sizing: border-box;
+}
+.section-shaded2 {
+  background-color: #0451742e;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 0.5rem 2rem;               /* vertical horizontal */
+  text-align: center;
+  box-sizing: border-box;
+}
+.section-shaded3 {
+  background-color: #0451740f;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 1rem 1rem;               /* vertical horizontal */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* TEXT ALIGNMENT UTILITY
+   Forces text-align: center when applied */
+.text-center {
+  text-align: center;
+}
+
+/* MARGIN CLEANUP ON LAST CHILDREN
+   Removes extra space after last child elements in sections */
+.section-shaded1 > *:last-child,
+.section-shaded1 .section-content > *:last-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.section-white1 > *:last-child,
+.section-white1 .section-content > *:last-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.section-shaded2 > *:last-child,
+.section-shaded2 .section-content > *:last-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.section-white2 > *:last-child,
+.section-white2 .section-content > *:last-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.section-shaded3 > *:last-child,
+.section-shaded3 .section-content > *:last-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+
+/* HERO VIDEO SECTION
+   Full-width video banner with upward shift and overlay support */
+.section-full-bleed {
+  position: relative;
+  top: -40px;            /* Shift up */
+  padding-top: 40px;     /* So content isn’t overlapped */
+  box-sizing: border-box;
+  z-index: 0;
+  border-top: 4px solid #e87a00;  /* match your header/nav color */  margin-top: 0 !important;
+  /*top: -40px;*/
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: 275px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+/* VIDEO Preparation */
+/* VIDEO STYLING
+   Covers the full background area behind text */   
+.section-full-bleed video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* behind everything */
+}
+
+/* OVERLAY TEXT BOX
+   Semi-transparent content box for text over the video */
+.section-full-bleed .content {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin: auto;
+  max-width: 700px;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2; /* force it on top */
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.35);  /* black with 50% opacity */
+  border-radius: 8px;
+  color: white;
+}
+
+/* RESPONSIVE TEXT BOX
+   Adjust padding and font size for small screens */
+@media (max-width: 600px) {
+/* OVERLAY TEXT BOX
+   Semi-transparent content box for text over the video */
+  .section-full-bleed .content {
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+  }
+}
+.section-full-bleed .content > *:first-child {
+  margin-top: 0 !important;
+}
+.section-full-bleed .content > *:last-child {
+  margin-bottom: 0 !important;
+}
+/* GRID LAYOUT FOR CARDS
+   Flexbox grid for card layout */
+.grid.cards.landing li {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: #04517400;
+  padding: 0rem 1.5rem;
+  border-radius: 8px;
+  min-height: 125px;                 /* taller card */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;          /* center vertically */
+  align-items: center;              /* center horizontally */
+  text-align: center;
+  box-shadow: 0 0px 0px #04517400;
+  transition: transform 0.2s ease;
+  gap: 0.5rem;                     /* consistent spacing between inner elements */
+}
+
+/* Make all content inside slightly larger */
+.grid.cards.landing li > * {
+  font-size: 1.0rem;
+  line-height: 2.0;
+}
+
+/* Button inside cards */
+.grid.cards.landing li .md-button {
+  font-size: 1.1rem;
+  padding: 0.6em 1.2em;
+}
+
+
+/* Partners section */
+.section-footer-band {
+  margin-top: -24px;  /* nudges the footer up */
+  background-color: #0451740f;
+  color: black;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 0.4rem 1rem;  /* reduced vertical padding */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  box-sizing: border-box;
+  margin-bottom: 0 !important;
+  border-bottom: 2px solid #e87a00;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;       /* allows stacking on small screens */
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.footer-label {
+  font-size: 0.95rem;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+}
+
+.footer-logo {
+  height: 32px;
+  max-height: 32px;
+  width: auto;
+  max-width: 100px;
+  object-fit: contain;
+  display: inline-block;
+}
+.logo-uwi {
+  height: 48px;
+  max-height: 48px;
+  max-width: 120px;
+}
+
+.md-content > article:last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
