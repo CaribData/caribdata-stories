@@ -4,7 +4,7 @@
   --md-accent-fg-color: #E87A00;   /* Burnt Orange */
   --md-typeset-a-color: #045174;
   --md-text-font: "Open Sans", sans-serif;
-  --md-code-font: "Fira Code", monospace;
+  --md-code-font: "Intel One Mono", monospace;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
