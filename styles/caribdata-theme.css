@@ -234,3 +234,15 @@ body {
   scrollbar-color: #bbb transparent;
   scrollbar-width: thin;
 }
+
+
+/* PHOTO borders */
+.full-width-bg {
+  background-color: #b2b2b2;
+  padding: 2rem 0;
+  text-align: center;
+}
+.full-width-bg img {
+  max-width: 60%;
+  height: auto;
+}
