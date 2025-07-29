@@ -138,7 +138,7 @@ body {
   }
 } 
 
-/* EXTERNAL BUTTON */ 
+/* EXTERNAL BUTTON TYPE 1 */ 
 .md-button-external {
   background-color: #04517400 !important;
   color: #04517485 !important;
@@ -170,6 +170,47 @@ body {
     font-size: 1rem !important;  /* scale for smaller screens */
   }
 } 
+
+
+
+
+/* EXTERNAL BUTTON TYPE 2 */ 
+.md-button-external2 {
+  background-color: #04517400 !important;
+  color: #04517485 !important;
+  border: 1.5px solid #04517485 !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+  border-radius: 6px !important;
+  padding: 0.6em 1.2em !important;
+  font-family: 'Montserrat', sans-serif !important;
+  transition: background-color 0.2s ease, color 0.2s ease !important;
+  font-size: 1.1rem !important;
+}
+
+/* Hover + focus effect */
+.md-button-external2:hover,
+.md-button-external2:focus {
+  background-color: #04517485 !important;
+  border: 2px solid #04517400 !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+.md-button-external2:hover {
+  transform: scale(1.02) !important;
+}
+@media (max-width: 600px) {
+  .md-button-external2 {
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+    font-size: 1rem !important;  /* scale for smaller screens */
+  }
+} 
+
+
+
+
 
 
 /* Sidebar scrollbar for WebKit browsers (Chrome, Edge, Safari) */

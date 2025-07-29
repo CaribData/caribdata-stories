@@ -9,11 +9,27 @@
 /* clamp() lets the font size adjust between 1rem and 1.5rem depending on screen width. */ 
 /* 300 is a light, elegant weight. */
   .hero-heading1 {
-  font-size: clamp(1rem, 5vw, 1.5rem) !important;
+  font-size: clamp(1.2rem, 1vw, 1.5rem) !important;
   font-weight: 300 !important;
   font-family: 'Montserrat', sans-serif !important;
 }
 .section-white1 {
+  background-color: #ffffff;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 2rem 2rem;               /* vertical horizontal */
+  text-align: center;
+  box-sizing: border-box;
+}
+.section-white2 {
+  background-color: #ffffff;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 0.5rem 2rem;               /* vertical horizontal */
+  text-align: center;
+  box-sizing: border-box;
+}
+.section-white3 {
   background-color: #ffffff;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -26,14 +42,6 @@
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   padding: 2rem 2rem;               /* vertical horizontal */
-  text-align: center;
-  box-sizing: border-box;
-}
-.section-white2 {
-  background-color: #ffffff;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  padding: 0.5rem 2rem;               /* vertical horizontal */
   text-align: center;
   box-sizing: border-box;
 }
@@ -87,7 +95,11 @@
   margin-top: 0;
   margin-bottom: 0;
 }
-
+.section-white3 > *:last-child,
+.section-white3 .section-content > *:last-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 
 /* HERO VIDEO SECTION
@@ -200,12 +212,12 @@
 
 /* Partners section */
 .section-footer-band {
-  margin-top: -24px;  /* nudges the footer up */
+  margin-top: 4px;  /* nudges the footer up */
   background-color: #0451740f;
   color: black;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  padding: 0.4rem 1rem;  /* reduced vertical padding */
+  padding: 0.5rem 1rem;  /* reduced vertical padding */
   font-family: 'Montserrat', sans-serif;
   font-size: 0.95rem;
   font-weight: 400;
@@ -246,4 +258,17 @@
 .md-content > article:last-child {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
+}
+
+.grid.cards.landing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* For tablets and mobiles: switch to 1 column */
+@media (max-width: 1024px) {
+  .grid.cards.landing {
+    grid-template-columns: 1fr;
+  }
 }
