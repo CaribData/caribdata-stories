@@ -184,7 +184,7 @@
   outline: none !important;
   box-shadow: none !important;
   background-color: #04517400;
-  padding: 0rem 1.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 8px;
   min-height: 125px;                 /* taller card */
   display: flex;
@@ -200,7 +200,7 @@
 /* Make all content inside slightly larger */
 .grid.cards.landing li > * {
   font-size: 1.0rem;
-  line-height: 2.0;
+  line-height: 1.75;
 }
 
 /* Button inside cards */
@@ -260,6 +260,8 @@
   padding-bottom: 0 !important;
 }
 
+
+
 .grid.cards.landing {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -267,7 +269,7 @@
 }
 
 /* For tablets and mobiles: switch to 1 column */
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .grid.cards.landing {
     grid-template-columns: 1fr;
   }
