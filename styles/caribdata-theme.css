@@ -47,7 +47,7 @@ body {
 
 /* CaribData sidebar styling */
 /* Mobile nav link colors — only apply on small screens */
-@media (max-width: 960px) {
+@media (max-width: 1220px) {
   .md-nav__link {
     color: #045174 !important;
   }
@@ -129,7 +129,7 @@ body {
 .md-button:hover {
   transform: scale(1.02) !important;
 }
-@media (max-width: 600px) {
+@media (max-width: 1220px) {
   .md-button {
     width: 100% !important;
     text-align: center !important;
@@ -162,7 +162,7 @@ body {
 .md-button-external:hover {
   transform: scale(1.02) !important;
 }
-@media (max-width: 600px) {
+@media (max-width: 1220px) {
   .md-button-external {
     width: 100% !important;
     text-align: center !important;
@@ -199,7 +199,7 @@ body {
 .md-button-external2:hover {
   transform: scale(1.02) !important;
 }
-@media (max-width: 600px) {
+@media (max-width: 1220px) {
   .md-button-external2 {
     width: 100% !important;
     text-align: center !important;

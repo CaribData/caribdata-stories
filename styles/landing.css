@@ -163,7 +163,7 @@
 
 /* RESPONSIVE TEXT BOX
    Adjust padding and font size for small screens */
-@media (max-width: 600px) {
+@media (max-width: 1220px) {
 /* OVERLAY TEXT BOX
    Semi-transparent content box for text over the video */
   .section-full-bleed .content {
@@ -269,7 +269,7 @@
 }
 
 /* For tablets and mobiles: switch to 1 column */
-@media (max-width: 1100px) {
+@media (max-width: 1220px) {
   .grid.cards.landing {
     grid-template-columns: 1fr;
   }
